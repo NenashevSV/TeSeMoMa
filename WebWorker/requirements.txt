@@ -1,0 +1,4 @@
+protobuf==3.17.3
+psutil==5.8.0
+PyMySQL==0.10.1
+six==1.16.0
