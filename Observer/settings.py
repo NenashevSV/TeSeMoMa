@@ -13,7 +13,7 @@ STOP_SERVICE = 'stop'
 PAUSE_SERVICE = 'pause'
 RESUME_SERVICE = 'continue'
 REQUEST_PERIOD = 30  # second
-TOKEN = '5067445228:AAFtOZay60GVQIfa6-u3GCMtcX7iPyAtNgI' # TeSeMoMa
+TOKEN = '5067445228:AAFtOZay60GVQIfa6-u3GCMtcX7iPyAtNgI' # TeSeMoMa здесь заполнить откен вашего бота
 
 # GROUPS
 USERS = 'USERS'
@@ -23,7 +23,7 @@ FULL_ADMINS = 'FULL_ADMINS'
 
 GROUP_USERS = {
     USERS: { # Формат ключ ID пользователя, значение MD5 хеш пароля или ""
-        -726899003: '',  # Observers GROUP
+        -726899003: '',  # id группы наблюдателей (бота нужно сделать админов группы чтобы он мог читать сообщения)
     },
     ENGINEER: {
 
@@ -32,7 +32,7 @@ GROUP_USERS = {
 
     },
     FULL_ADMINS: {
-        0000000:  '098f6bcd4621d373cade4e832627b4f6',  # Админ
+        0000000:  '098f6bcd4621d373cade4e832627b4f6',  # ID Админа
     },
 }
 
