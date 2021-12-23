@@ -2,10 +2,10 @@
 
 import handlers
 import pymysql
+import logging as log
 
 DATABASES = { # Настройки баз данных
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'obj',
         'USER': 'root',
         'PASSWORD': '123456',
@@ -13,7 +13,6 @@ DATABASES = { # Настройки баз данных
         'PORT': 3306,
     },
 	'obj': {  # Алиас БД
-		'ENGINE': 'django.db.backends.mysql',
 		'NAME': 'obj',
 		'USER': 'root',
 		'PASSWORD': '123456',
@@ -25,13 +24,18 @@ DATABASES = { # Настройки баз данных
 # Начало создание подключений к БД (не трогать)
 connections = {}
 for alias in DATABASES:
-	dataBaseSettings = DATABASES[alias]
-	user = dataBaseSettings['USER']
-	password = dataBaseSettings['PASSWORD']
-	host = dataBaseSettings['HOST']
-	port = dataBaseSettings['PORT']
-	database = dataBaseSettings['NAME']
-	connections[alias] = pymysql.connect(user=user, password=password, host=host, db=database, port=port)
+	try:
+		print(alias)
+		dataBaseSettings = DATABASES[alias]
+		user = dataBaseSettings['USER']
+		password = dataBaseSettings['PASSWORD']
+		host = dataBaseSettings['HOST']
+		port = dataBaseSettings['PORT']
+		database = dataBaseSettings['NAME']
+		connections[alias] = pymysql.connect(user=user, password=password, host=host, db=database, port=port)
+	except Exception as e:
+		log.WARN('Error DB connection for alias {}'.format(alias))
+
 # Конец() создание подключений к БД (не трогать)
 
 
