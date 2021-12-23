@@ -13,7 +13,6 @@ STOP_SERVICE = 'stop'
 PAUSE_SERVICE = 'pause'
 RESUME_SERVICE = 'continue'
 REQUEST_PERIOD = 30  # second
-#TOKEN = '5036188565:AAHxkQkujU9bnIbjT-5iaR-Z_wfF7wje0NU' # Molnia
 TOKEN = '5067445228:AAFtOZay60GVQIfa6-u3GCMtcX7iPyAtNgI' # TeSeMoMa
 
 # GROUPS
@@ -30,10 +29,10 @@ GROUP_USERS = {
 
     },
     SERVER_ADMINS: {
-        #0000000: 'Бурангулов А.'
+
     },
     FULL_ADMINS: {
-       261524105:  '098f6bcd4621d373cade4e832627b4f6',  # Nenashev S.V.
+        0000000:  '098f6bcd4621d373cade4e832627b4f6',  # Админ
     },
 }
 
